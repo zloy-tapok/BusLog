@@ -8,6 +8,7 @@ namespace Model
 {   
     /// <summary>
     /// Базовый класс "Человек".
+    /// Сериализуемый.
     /// </summary>
     [Serializable]
     public class Human
@@ -20,17 +21,17 @@ namespace Model
         /// <summary>
         /// Имя объекта.
         /// </summary>
-        public string Fname { get; set; }
+        public string First_name { get; set; }
 
         /// <summary>
         /// Фамилия объекта.
         /// </summary>
-        public string Sname { get; set; }
+        public string Second_name { get; set; }
 
         /// <summary>
         /// Отчетсво объекта.
         /// </summary>
-        public string Lname { get; set; }
+        public string Last_name { get; set; }
 
         /// <summary>
         /// Возраст объекта.
@@ -40,7 +41,7 @@ namespace Model
         /// <summary>
         /// Номер телефона объекта.
         /// </summary>
-        public int Phone { get; set; }
+        public long Phone { get; set; }
 
         /// <summary>
         /// Профессия объекта.

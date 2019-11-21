@@ -9,70 +9,16 @@ using System.Threading.Tasks;
 namespace Model
 {
     /// <summary>
-    /// Производный класс "Сотрудник" - наследуется от класса "Человек". 
+    /// Производный класс "Сотрудник" - наследуется от класса "Человек".
+    /// Сериализуемый.
     /// </summary>
     [Serializable]
-    public class Employee : Human, ISerial
+    public class Employee : Human
     {
         /// <summary>
         /// Автосвойство Зарплата объекта.
         /// </summary>
-        public int Zarplata { get; set; }
-
-        /// <summary>
-        /// Метод Сериализации списка.
-        /// </summary>
-        /// <param name="spisokEmployees"></param>
-        public static void DoSerial(List<Employee> spisokEmployees)
-        {
-            var formatter = new BinaryFormatter();
-            using (var filestream = new FileStream("employee.data", FileMode.OpenOrCreate))
-            {
-                formatter.Serialize(filestream, spisokEmployees);
-            }
-           
-        }
-
-        /// <summary>
-        /// Метод Десериализации списка.
-        /// </summary>
-        /// <param name="spisokEmployees"></param>
-        public static List<Employee> DoDeserial()
-        {
-            List<Employee> spisokEmployees = new List<Employee>();
-            var formatter = new BinaryFormatter();
-            using (var filestream = new FileStream("employee.data", FileMode.OpenOrCreate))
-            {
-                if (filestream.Length != 0)
-                {
-                    return spisokEmployees = formatter.Deserialize(filestream) as List<Employee>;
-                }
-                else
-                {
-
-                    return spisokEmployees;
-                }
-                
-            }
-        }
-        /// <summary>
-        /// Неиспользуемые методы. 
-        /// Для тех задания - наличие интерфейса.
-        /// </summary>
-        /// <param name="work1"></param>
-        /// <param name="work2"></param>
-        public void RashetZarplata(int work1, int work2)
-        {
-            Zarplata = work1 * work2;
-        }
-
-        /// <summary>
-        /// Неиспользуемые методы. 
-        /// Для тех задания - наличие интерфейса.
-        /// </summary>
-        public void RashetZarplata(int work1, int work2, int work3)
-        {
-            Zarplata = work1 / work2 * work3;
-        }
+        public decimal Zarplata { get; set; }
     }
+      
 }
