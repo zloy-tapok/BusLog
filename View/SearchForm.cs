@@ -32,9 +32,14 @@ namespace View
             foreach (var item in spisokSearchEmpl)
             {
                 item.Id = i;
-                dataGridViewSearch.Rows.Add(spisokSearchEmpl[i].Id, spisokSearchEmpl[i].First_name, spisokSearchEmpl[i].Second_name,
-                                                  spisokSearchEmpl[i].Last_name, spisokSearchEmpl[i].Age, spisokSearchEmpl[i].Phone,
-                                                  spisokSearchEmpl[i].Profession, spisokSearchEmpl[i].Zarplata);
+                dataGridViewSearch.Rows.Add(item.Id, 
+                                            item.First_name, 
+                                            item.Second_name,
+                                            item.Last_name, 
+                                            item.Age, 
+                                            item.Phone,
+                                            item.Profession, 
+                                            item.Zarplata);
                 i++;
             }
         }
@@ -73,7 +78,7 @@ namespace View
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             List<Employee> spisokSearchEmpl = new List<Employee>();
-            spisokSearchEmpl.Clear();
+
           
             foreach (var item in spisokSearch)
             {

@@ -58,13 +58,13 @@ namespace View
             spisokMyTextBox.Add(new TextBoxses("Error: Profession field is empty.", maskedTextBoxProfession));
             spisokMyTextBox.Add(new TextBoxses("Error: You did not fill out all the fields for payroll.", maskedTextBoxWork2));
             spisokMyTextBox.Add(new TextBoxses("Error: You did not fill out all the fields for payroll.", maskedTextBoxWork3, (x) => radioButtonSpecialists.Checked && string.IsNullOrWhiteSpace(x.Text)));
-            spisokMyTextBox.Add(new TextBoxses("Error: Age < 18", maskedTextBoxAge, (x) => int.Parse(maskedTextBoxAge.Text) < 18));
-            spisokMyTextBox.Add(new TextBoxses("Error: Age > 120 (Too old).", maskedTextBoxAge, (x) => int.Parse(maskedTextBoxAge.Text) > 120));
-            spisokMyTextBox.Add(new TextBoxses("Error: Number hour > 744 (hours in month).", maskedTextBoxWork2, (x) => radioButtonWorkers.Checked && int.Parse(maskedTextBoxWork2.Text) > 744));
-            spisokMyTextBox.Add(new TextBoxses("Error: Norma of days < 1.", maskedTextBoxWork2, (x) => radioButtonSpecialists.Checked && int.Parse(maskedTextBoxWork2.Text) < 1));
-            spisokMyTextBox.Add(new TextBoxses("Error: Norma of days > 31.", maskedTextBoxWork2, (x) => radioButtonSpecialists.Checked && int.Parse(maskedTextBoxWork2.Text) > 31));
-            spisokMyTextBox.Add(new TextBoxses("Error: Fact days > 31.", maskedTextBoxWork3, (x) => radioButtonSpecialists.Checked && int.Parse(maskedTextBoxWork3.Text) > 31));
-            spisokMyTextBox.Add(new TextBoxses("Error: Fact days > 31.", maskedTextBoxWork2, (x) => radioButtonManagers.Checked && int.Parse(maskedTextBoxWork2.Text) > 31));
+            spisokMyTextBox.Add(new TextBoxses("Error: Age < 18", maskedTextBoxAge, (x) => int.Parse(x.Text) < 18));
+            spisokMyTextBox.Add(new TextBoxses("Error: Age > 120 (Too old).", maskedTextBoxAge, (x) => int.Parse(x.Text) > 120));
+            spisokMyTextBox.Add(new TextBoxses("Error: Number hour > 744 (hours in month).", maskedTextBoxWork2, (x) => radioButtonWorkers.Checked && int.Parse(x.Text) > 744));
+            spisokMyTextBox.Add(new TextBoxses("Error: Norma of days < 1.", maskedTextBoxWork2, (x) => radioButtonSpecialists.Checked && int.Parse(x.Text) < 1));
+            spisokMyTextBox.Add(new TextBoxses("Error: Norma of days > 31.", maskedTextBoxWork2, (x) => radioButtonSpecialists.Checked && int.Parse(x.Text) > 31));
+            spisokMyTextBox.Add(new TextBoxses("Error: Fact days > 31.", maskedTextBoxWork3, (x) => radioButtonSpecialists.Checked && int.Parse(x.Text) > 31));
+            spisokMyTextBox.Add(new TextBoxses("Error: Fact days > 31.", maskedTextBoxWork2, (x) => radioButtonManagers.Checked && int.Parse(x.Text) > 31));
         }
 
 

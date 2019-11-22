@@ -36,9 +36,14 @@ namespace View
             foreach (var item in spisokEmployees)
             {
                 item.Id = i;
-                dataGridViewListEmployee.Rows.Add(spisokEmployees[i].Id, spisokEmployees[i].First_name, spisokEmployees[i].Second_name, 
-                                                  spisokEmployees[i].Last_name, spisokEmployees[i].Age, spisokEmployees[i].Phone, 
-                                                  spisokEmployees[i].Profession, spisokEmployees[i].Zarplata);
+                dataGridViewListEmployee.Rows.Add(item.Id, 
+                                                  item.First_name, 
+                                                  item.Second_name,                                                 
+                                                  item.Last_name, 
+                                                  item.Age, 
+                                                  item.Phone,
+                                                  item.Profession, 
+                                                  item.Zarplata);
                 i++;
             }
         }
